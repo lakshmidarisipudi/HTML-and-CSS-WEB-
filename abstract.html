@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Abstract</title>
+<style>
+.mySlides {display:none;}
+body  {
+  background-image: url("down1.jpg");
+  background-size:1500px 100px;
+  background-repeat:no-repeat;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+</style>
+</head>
+<body>
+<table  border="0" cellpadding="4"  align="left">
+<td><a href="abstract.html"><img src="logo.jpg" height="45%" width="50%"></a></td>
+</table>
+<table  border="0" cellpadding="4"  align="right" >
+<td><a href="abstract.html"><font color="black">HOME</font></a></td>
+<td><a href="#"><font color="black">CATEGORIES</font></a></td>
+<td><a href="#"><font color="black">BLOG</font></a></td>
+<td><a href="#"><font color="black">STYLES</font></a></td>
+<td><a href="#"><font color="black">ABOUT</font></a></td>
+<td><a href="#"><font color="black">CONTACT</font></a></td>
+</table>
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="music1.jpg" style="width:100%">
+  <img class="mySlides" src="music2.jpg" style="width:100%">
+  <img class="mySlides" src="music3.jpg" style="width:100%">
+  <img class="mySlides" src="music4.jpg" style="width:100%">
+  <img class="mySlides" src="music5.jpg" style="width:100%">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
+<a target="_blank" href="img_forest.jpg">
+  <img src="img_forest.jpg" alt="Forest" style="width:150px">
+</a>
+</body>
+</html>
